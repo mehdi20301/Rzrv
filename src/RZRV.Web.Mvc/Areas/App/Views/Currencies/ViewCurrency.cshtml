@@ -1,0 +1,38 @@
+﻿@using RZRV.Web.Areas.App.Startup
+@using RZRV.Web.Areas.App.Models.Currencies
+@model CurrencyViewModel
+
+@{
+    ViewBag.CurrentPageName = AppPageNames.Common.Currencies;
+}
+@section Scripts
+{
+    <script abp-src="/view-resources/Areas/App/Views/Currencies/CreateOrEdit.js" asp-append-version="true"></script>
+}
+
+<abp-page-subheader title="@L("Details")" >
+
+</abp-page-subheader>
+
+                 
+            
+
+<div class="app-content flex-column-fluid">
+    <div class=" @(await GetContainerClass())">
+        <div class="card">
+            <div class="card-body">
+             <div id="CurrencyInformationsTab">        
+                <div class="row">
+                                <div class="col-6 mb-3">
+                <h6>@L("Name") :</h6>
+                @Model.Currency.Name
+            </div>
+
+                    
+                </div>
+            </div>
+		</div>
+        </div>
+    </div>
+</div>
+
